@@ -21,5 +21,5 @@ class WebScryp:
         question = input("Download (Y/N):").upper()
         if question == "Y":
             download("https://" + argv[1])
-        elif question == "N":
+        else:
             print("GoodBye")
