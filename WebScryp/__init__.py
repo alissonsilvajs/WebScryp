@@ -13,10 +13,9 @@ class WebScryp:
         if len(argv) == 1:
             print("Try: python main.py <website whitout https://>")
         elif len(argv) == 2:
-            if argv[1]:
-                r = get("https://" + argv[1])
-                print(r.text)
-                self.download_file()
+            r = get("https://" + argv[1])
+            print(r.text)
+            self.download_file()
                 
     def download_file(self):
         question = input("Download (Y/N):").upper()
