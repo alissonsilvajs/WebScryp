@@ -11,15 +11,15 @@ class WebScryp:
         Collect the command line arguments
         """
         if len(argv) == 1:
-            print("Try: python run.py <website whitout https://>")
+            print("Try: python run.py <website link>")
         elif len(argv) == 2:
-            r = get("https://" + argv[1])
+            r = get(argv[1])
             print(r.text)
             self.download_file()
                 
     def download_file(self):
         question = input("Download (Y/N):").upper()
         if question == "Y":
-            download("https://" + argv[1])
+            download(argv[1])
         else:
             print("GoodBye")
