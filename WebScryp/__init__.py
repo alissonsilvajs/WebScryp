@@ -11,7 +11,7 @@ class WebScryp:
         Collect the command line arguments
         """
         if len(argv) == 1:
-            print("Try: python main.py <website whitout https://>")
+            print("Try: python run.py <website whitout https://>")
         elif len(argv) == 2:
             r = get("https://" + argv[1])
             print(r.text)
